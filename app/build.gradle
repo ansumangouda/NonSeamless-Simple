@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+android {
+    namespace 'com.avenues.lib.activity'
+    compileSdk 34
+    /* compileSdkVersion 27
+     buildToolsVersion '28.0.2'*/
+
+    defaultConfig {
+        applicationId "com.avenues.lib.activity"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    /*buildTypes {
+        release {
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled true
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testCoverageEnabled false
+        }
+    }*/
+
+    //compileOptions {
+    /*      sourceCompatibility JavaVersion.VERSION_1_8
+          targetCompatibility JavaVersion.VERSION_1_8
+      }
+      lintOptions {
+          abortOnError true
+      }
+      compileOptions {
+          sourceCompatibility JavaVersion.VERSION_1_7
+          targetCompatibility JavaVersion.VERSION_1_7
+      }*/
+}
+/*
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.avenues.lib.activity"
+        minSdkVersion 14
+        targetSdkVersion 25
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+}
+*/
+dependencies {
+
+    implementation 'com.jakewharton:butterknife:6.1.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+}
